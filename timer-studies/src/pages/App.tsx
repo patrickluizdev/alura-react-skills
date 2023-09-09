@@ -8,18 +8,6 @@ import { ITask } from '../types/task';
 
 function App() {
     const [task, setTask] = React.useState<ITask[]>([]);
-    // const [task, setTask] = useState<ITask[]>(() => {
-    //   const cachedTask = localStorage.getItem('cachedTask');
-    //   return cachedTask ? JSON.parse(cachedTask) : [];
-    // }); 
-    // useEffect(() => {
-    //   localStorage.setItem('cachedTask', JSON.stringify(task));
-    // }, [task]);
-
-    // function clearLocalStorage() {
-    //   localStorage.removeItem('cachedTask');
-    // }
-    // clearLocalStorage()
 
     const [set, setUse] = useState<ITask>();
     function useTask( taskUsed: ITask){

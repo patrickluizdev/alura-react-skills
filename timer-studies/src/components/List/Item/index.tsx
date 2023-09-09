@@ -14,12 +14,10 @@ export default function item(
     id, 
     useTask
   }: Props){
-  // console.log("task: ", {task, time, select, complete, id})
   return(
     <li
       className={`${style.item} ${select ? style.itemSelecionado : ''} ${complete ? style.itemCompletado : ""}`}
       onClick={() => {
-        // console.log("task: ", { task, time, select, complete, id });
         !complete && useTask({
           task,
           time,

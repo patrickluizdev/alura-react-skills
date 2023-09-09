@@ -11,7 +11,6 @@ interface Props{
 }
 
 export default function Timer( { set, endTask }: Props){
-  // console.log("Conversão", timeForSeconds('1:01:05'))
   const [time, setTime] = useState<number>();
 
   React.useEffect(() => {
