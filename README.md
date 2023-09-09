@@ -5,6 +5,9 @@ O propósito deste repositório e de desenvolver os projetos em React propostos 
 ## Projetos Incluídos
 
 1. **Projeto 1 - Timer Studies:** Uma aplicação que permite que você insira tarefas e seus respectivos tempos estimados para conclusão. O aplicativo iniciará uma contagem regressiva para rastrear o tempo restante até a conclusão de cada tarefa. Ele demonstra o uso de vários conceitos importantes, como ciclos de vida, DRY (Don't Repeat Yourself), SRP (Single Responsibility Principle), componentes stateless, props, CSS Modules e orientação a objetos.
+- ***[Arquivos Timer Studies:](https://github.com/patrickluizdev/alura-react-skills/tree/main/timer-studies)***
+- ***[Live Project:](http://timerstudies.rf.gd/)***
+
 
 
 ## Como Usar
