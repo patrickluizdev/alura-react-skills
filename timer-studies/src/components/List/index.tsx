@@ -3,23 +3,20 @@ import style from './List.module.scss';
 import Item from './Item';
 import { ITask } from '../../types/task';
 
+interface Props {
+  task: ITask[],
+  useTask: (taskUsed: ITask) => void
+}
 
-
-function List({task}: {task: ITask[]}){
-  // const [task, setTask] = useState([
-  //   {
-  //   task: "React",
-  //   time: "02:00:00"
-  //   }
-  // ]);
-
+function List({task, useTask}: Props){
   return(
     <aside className={style.listTask}>
       <h2>Estudos do Dia</h2>
       <ul>
         {task.map((task, index)=> (
           <Item
-            key={index}
+            useTask={useTask}
+            key={task.id}
             {...task}
           />
         ))}

@@ -16,11 +16,47 @@ function App() {
     //   localStorage.setItem('cachedTask', JSON.stringify(task));
     // }, [task]);
 
-  return (
+    // function clearLocalStorage() {
+    //   localStorage.removeItem('cachedTask');
+    // }
+    // clearLocalStorage()
+
+    const [set, setUse] = useState<ITask>();
+    function useTask( taskUsed: ITask){
+      setUse(taskUsed);
+      setTask(taskOld => taskOld.map( task =>({
+        ...task,
+        select: task.id === taskUsed.id ? true : false
+      })) );
+    }
+
+    function endTask(){
+      if (set){
+        setUse(undefined);
+        setTask(taskOld => taskOld.map(task =>  {
+          if(task.id === set.id){
+            return {
+              ...task,
+              set: false,
+              complete: true
+            }
+          }
+          return task;
+        }))
+      }
+    }
+  
+    return (
     <div className={style.AppStyle}>
         <Forms setTask={setTask}/>
-        <List task={task}/>
-        <Timer/>
+        <List 
+         task={task}
+         useTask={useTask}
+        />
+        <Timer 
+          set={set}
+          endTask={endTask}
+        />
     </div>
   );
 }
