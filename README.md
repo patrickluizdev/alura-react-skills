@@ -4,8 +4,7 @@ O propósito deste repositório e de desenvolver os projetos em React propostos 
 
 ## Projetos Incluídos
 
-1. **Projeto 1 - Calculadora de Notas:** Uma aplicação simples que calcula a média das notas inseridas pelo usuário.
-
+1. **Projeto 1 - Timer Studies:** Uma aplicação que permite que você insira tarefas e seus respectivos tempos estimados para conclusão. O aplicativo iniciará uma contagem regressiva para rastrear o tempo restante até a conclusão de cada tarefa. Ele demonstra o uso de vários conceitos importantes, como ciclos de vida, DRY (Don't Repeat Yourself), SRP (Single Responsibility Principle), componentes stateless, props, CSS Modules e orientação a objetos.
 
 
 ## Como Usar
